@@ -21,8 +21,6 @@ def CheckCV(CV = "", num = 0):
             temperature=0.2
         )
     )
-    #with open(f"cv{num}.json", "w", encoding="utf-8") as file:
-    #    file.write(response.text)
     WriteOutput(f"cv{num}.json", response.text)
     MDresponse = client.models.generate_content(
         model="gemini-2.5-flash",
@@ -31,8 +29,6 @@ def CheckCV(CV = "", num = 0):
             temperature=0.2
         )
     )
-    #with open(f"cv{num}.md", "w", encoding="utf-8") as file:
-    #    file.write(MDresponse.text)
     WriteOutput(f"cv{num}.md", MDresponse.text)
 
 
