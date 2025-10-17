@@ -1,4 +1,4 @@
-using this job description(JD) evaluate the following CV and return the evaluation result in following json format: 
+Using this job description(JD) evaluate the following CV and return the evaluation result in following json format: 
 {
  "match_score": 0-100,
  "summary": "Īss apraksts, cik labi CV atbilst JD.",
@@ -11,4 +11,5 @@ using this job description(JD) evaluate the following CV and return the evaluati
  "verdict": "strong match | possible match | not a match"
 }
 
+Do not use any markdown ! 
 The CV : 
