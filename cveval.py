@@ -19,7 +19,7 @@ def CheckCV(CV = "", num = 0):
             temperature=0.2
         )
     )
-    with open(f"output/cv{1}.json", "w") as file:
+    with open(f"/output/cv{num}.json", "w", encoding="utf-8") as file:
         file.write(response)
     MDresponse = client.models.generate_content(
         model="gemini-2.5-flash",
@@ -28,15 +28,15 @@ def CheckCV(CV = "", num = 0):
             temperature=0.2
         )
     )
-    with open(f"output/cv{1}.md", "w") as file:
+    with open(f"/output/cv{num}.md", "w", encoding="utf-8") as file:
         file.write(MDresponse)
 
 
-with open("sample_inputs/jd.txt", "r") as file:
+with open("/sample_inputs/jd.txt", "r", encoding="utf-8") as file:
     global JD
     JD = file.read()
 
 for i in range(1, 3):
-    with open(f"sample_input/cv{i}.txt", "r") as file:
+    with open(f"/sample_input/cv{i}.txt", "r") as file:
         CheckCV(CV = file.read(), num = i)
 
